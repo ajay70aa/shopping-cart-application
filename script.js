@@ -15,11 +15,14 @@ if (currentUser) {
   document.querySelector(".buttons").appendChild(shopBtn);
 
   shopBtn.addEventListener("click", () => {
-    window.location.href = "/shop/index.html";
+    window.location.href = "shop/index.html";
   });
 } else {
   loginBtn.addEventListener("click", () => {
-    window.location.href = "/login/index.html";
+    window.location.href = "login/index.html";
+  });
+  signupBtn.addEventListener("click", () => {
+    window.location.href = "register/index.html";
   });
 }
 function renderNavbar(){
