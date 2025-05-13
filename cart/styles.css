@@ -190,3 +190,8 @@ nav .nav-items a {
   cursor: pointer;
   margin-top: 10px;
 }
+.cart-msg {
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+}

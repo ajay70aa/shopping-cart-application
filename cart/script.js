@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  let currentUser = localStorage.getItem("currentUser");
+  let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
   if (!currentUser) {
     window.location.href = "../login/login.html";
@@ -10,14 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartTotal = document.getElementById("cart-total")
   const navbar = document.querySelector(".nav-items")
   
-  let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  let userCartKey = `cart_${currentUser.email}`
+  let cartItems = JSON.parse(localStorage.getItem(userCartKey)) || [];
   if(cartItems){
     renderNavbar()
     renderItems()
     renderPriceList()
     addCartTotal()
   } else{
-    cartItemsContainer.innerHTML += "<div>Cart is Empty!</div>"
+    cartItemsContainer.innerHTML += "<div class='cart-msg'>Cart is Empty!</div>"
   }
   function renderNavbar() {
     navbar.innerHTML = ""
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   function renderItems(){
     cartItemsContainer.innerHTML = ""
-    cartItems.forEach((item) => {
+    cartItems.forEach((item, index) => {
       const itemHTML = `
         <div class="item">
           <img src="${item.image}" alt="Item" />
@@ -49,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="title">${item.title}</div><br/>
             <div class="price">$${item.price}</div>
           </div>
-          <button class="removeBtn">Remove from Cart</button>
+          <button class="removeBtn" data-index="${index}">Remove from Cart</button>
         </div>
       `
       cartItemsContainer.innerHTML += itemHTML
@@ -85,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   function removeItem(index) {
     cartItems.splice(index, 1);
-    localStorage.setItem("cart", JSON.stringify(cartItems));
+    localStorage.setItem(userCartKey, JSON.stringify(cartItems));
     renderItems();
     renderPriceList();
     addCartTotal();

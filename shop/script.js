@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  let currentUser = localStorage.getItem("currentUser");
+  let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
   if (!currentUser) {
     window.location.href = "../login/login.html";
     return;
   }
-
+  const userCartKey = `cart_${currentUser.email}`;
   const mensItemsContainer = document.querySelector("#mens-clothing .items");
   const womansItemsContainer = document.querySelector(
     "#womans-clothing .items"
@@ -271,10 +271,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const priceText = itemElement.querySelector(".price").innerText;
     const price = parseFloat(priceText.replace("$", ""));
     const title = itemElement.querySelector(".title").innerText;
-    
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // Check if item already exists (based on image or title)
+    let cart = JSON.parse(localStorage.getItem(userCartKey)) || [];
+
     const existingItem = cart.find(p => p.image === img);
 
     if (existingItem) {
@@ -288,10 +287,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem(userCartKey, JSON.stringify(cart));
     alert("Item added to cart!");
   }
   });
+
 
 });
 
