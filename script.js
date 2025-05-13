@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   } else {
     loginBtn.addEventListener("click", () => {
-      window.location.href = "login/index.html";
+      window.location.href = "login/login.html";
     });
     signupBtn.addEventListener("click", () => {
       window.location.href = "register/index.html";
