@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeShop.</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <nav>
+      <div class="brand">
+        <a href="/">MeShop.</a>
+      </div>
+      <div class="nav-items">
+        
+      </div>
+    </nav>
+
+    <main>
+      <aside>
+        <section>
+          <h3>Colors</h3>
+          <ul>
+            <li>
+              <input id="red" type="checkbox" class="color-filter" value="red" />
+              <label for="red">Red</label>
+            </li>
+            <li>
+              <input id="blue" type="checkbox" class="color-filter" value="blue" />
+              <label for="blue">Blue</label>
+            </li>
+            <li>
+              <input id="green" type="checkbox" class="color-filter" value="green" />
+              <label for="green">Green</label>
+            </li>
+            <li>
+              <input id="black" type="checkbox" class="color-filter" value="black" />
+              <label for="black">Black</label>
+            </li>
+            <li>
+              <input id="white" type="checkbox" class="color-filter" value="white" />
+              <label for="white">White</label>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Sizes</h3>
+          <ul>
+            <li>
+              <input id="s" type="checkbox" class="size-filter" value="sm" />
+              <label for="s">S</label>
+            </li>
+            <li>
+              <input id="m" type="checkbox" class="size-filter" value="md" />
+              <label for="m">M</label>
+            </li>
+            <li>
+              <input id="l" type="checkbox" class="size-filter" value="lg" />
+              <label for="l">L</label>
+            </li>
+            <li>
+              <input id="xl" type="checkbox" class="size-filter" value="xl" />
+              <label for="xl">XL</label>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Rating</h3>
+          <input type="range" id="rating-filter" min="0" max="5" value="0" />
+          <datalist id="values">
+            <option value="0" label="0"></option>
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5" label="5"></option>
+          </datalist>
+        </section>
+        <section>
+          <h3>Price Range</h3>
+          <ul>
+            <li>
+              <input id="0-25" type="checkbox" class="price-filter" value="0-25" />
+              <label for="0-25">$0 to $25</label>
+            </li>
+            <li>
+              <input id="25-50" type="checkbox" class="price-filter" value="25-50" />
+              <label for="25-50">$25 to $50</label>
+            </li>
+            <li>
+              <input id="50-100" type="checkbox" class="price-filter" value="50-100" />
+              <label for="50-100">$50 to $100</label>
+            </li>
+            <li>
+              <input id="100on" type="checkbox" class="price-filter" value="100on" />
+              <label for="100on">$100 onwards</label>
+            </li>
+          </ul>
+        </section>
+      </aside>
+      <div class="main-content">
+        <input type="text" placeholder="Search" />
+        <div class="filters">
+          <div class="filter active" data-category="all">All</div>
+          <div class="filter" data-category="mens-clothing">Mens</div>
+          <div class="filter" data-category="womens-clothing">Womens</div>
+          <div class="filter" data-category="jewelery">Jewellery</div>
+          <div class="filter" data-category="electronics">Electronics</div>
+        </div>
+        <section id="mens-clothing">
+          <h2>Men's Clothing</h2>
+          <div class="items">
+            
+          </div>
+        </section>
+        <section id="womans-clothing">
+          <h2>Women's Clothing</h2>
+          <div class="items">
+            
+          </div>
+        </section>
+        <section id="jewelery">
+          <h2>Jewelery</h2>
+          <div class="items">
+            
+          </div>
+        </section>
+        <section id="electronics">
+          <h2>Electronics</h2>
+          <div class="items">
+            
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="script.js" defer></script>
+  </body>
+</html>

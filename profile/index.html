@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Profile</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="brand">
+        <a href="/">MeShop.</a>
+      </div>
+      <div class="nav-items">
+        <a href="../index.html">Home</a>
+        <a href="../shop/index.html">Shop</a>
+        <a href="../cart/index.html">My Cart</a>
+        <a href="" class="logoutLink">Logout</a>
+      </div>
+    </nav>
+    <div class="edit-details">
+      <h3 id="user-info"></h3>
+      <h1>My Profile</h1>
+      <input type="text" placeholder="Change First Name" id="fName">
+      <br/>
+      <input type="text" placeholder="Change Last Name" id="lName">
+      <br/>
+      <p id="error1"></p>
+      <button id="saveInfo">Save Info</button>
+    </div>
+    <div class="edit-password">
+      <h1>Edit Password</h1>
+      <input type="text" placeholder="Old Password" id="oldPassword">
+      <br/>
+      <input type="password" placeholder="New Password" id="newPassword">
+      <br/>
+      <input type="password" placeholder="Confirm New Password" id="confirmNewPassword">
+      <br/>
+      <button id="changePassword">Change Password</button>
+      <br/>
+      <p id="error2"></p>
+      <button id="logout">Logout</button>
+    </div>
+    <script src="script.js" async defer></script>
+  </body>
+</html>
