@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navbar.innerHTML = currentUser ? 
     `<a href="../index.html">Home</a>
       <a href="../shop/index.html">Shop</a>
-      <a href="/cart/index.html">My Cart</a>
+      <a href="cart/index.html">My Cart</a>
       <a href="../profile/index.html">My Profile</a>
       <a class="logoutLink">Logout</a>
     `: 
