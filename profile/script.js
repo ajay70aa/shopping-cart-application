@@ -63,11 +63,11 @@ if(currentUser){
 
   logout.addEventListener("click", () => {
     localStorage.removeItem("currentUser")
-    window.location.href = "../login/login.html"
+    window.location.href = "login/login.html"
   })
   document.querySelector(".logoutLink").addEventListener("click", () => {
   localStorage.removeItem("currentUser")
-  window.location.href = "../login/login.html"
+  window.location.href = "login/login.html"
 })
 } else {
   window.location.href = "login/login.html"

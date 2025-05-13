@@ -25,16 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderNavbar(){
     navbar.innerHTML = ""
     navbar.innerHTML = currentUser ? 
-    `<a href="../index.html">Home</a>
-      <a href="/shop/index.html">Shop</a>
-      <a href="../cart/index.html">My Cart</a>
+    `<a href="index.html">Home</a>
+      <a href="shop/index.html">Shop</a>
+      <a href="cart/index.html">My Cart</a>
       <a class="logoutLink">Logout</a>
     `: 
     `
-    <a href="../index.html">Home</a>
-    <a href="../login/login.html">Login</a>
-    <a href="../register/index.html">Signup</a>
-    <a href="../cart/index.html">My Cart</a>
+    <a href="index.html">Home</a>
+    <a href="login/login.html">Login</a>
+    <a href="register/index.html">Signup</a>
+    <a href="cart/index.html">My Cart</a>
     `;
     document.querySelector(".logoutLink").addEventListener("click", () => {
       localStorage.removeItem("currentUser")
