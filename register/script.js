@@ -37,7 +37,7 @@ signupBtn.addEventListener("click", () => {
       email.value = ""
       password.value = ""
       confirmPassword.value = ""
-      window.location.href = "/login/login.html"
+      window.location.href = "../login/login.html"
     }
   } else {
     errorMsg.textContent = "Make sure password and confirm password are same"
